@@ -4,7 +4,7 @@ import joblib
 import os
 
 # Load Model
-model_path = r"C:\Users\Virgie\Downloads\MD_ASG_SESI_2\Sesi 2 (Machine Learning Pipeline)\mlruns\1\models\m-9fad27cfdf0b4e758b776f20bb70162e\artifacts\model.pkl"
+model_path = "model.pkl"
 
 if os.path.exists(model_path):
     model = joblib.load(model_path)
@@ -66,4 +66,5 @@ if st.button("Predict"):
     if prediction[0] == 1:
         st.error("Prediction: High Risk of Heart Attack")
     else:
+
         st.success("Prediction: Low Risk of Heart Attack")
